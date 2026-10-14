@@ -221,8 +221,9 @@ Preguntas de discusión:
 
 - ¿Por qué lanzar `UnsupportedOperationException` puede ser señal de mal diseño?
 - ¿Qué contrato estaba prometiendo `Animal`?
+Que todos los animales pueden volar, nadar y caminar.
 - ¿Cómo cambia el diseño cuando modelamos capacidades en lugar de herencia amplia?
-
+Se evita estar usando excepciones para cada caso.
 ## Integrante 4 - DIP/ISP
 
 Principios:

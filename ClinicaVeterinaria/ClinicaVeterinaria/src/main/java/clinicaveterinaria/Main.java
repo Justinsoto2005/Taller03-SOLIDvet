@@ -29,7 +29,7 @@ public class Main {
         MascotaService mascotaService = new MascotaService(baseDatos);
         VeterinarioCrudService veterinarioCrudService = new VeterinarioCrudService(baseDatos);
         ReservaService reservaService = new ReservaService(baseDatos);
-        DiagnosticoService diagnosticoService = new DiagnosticoService();
+        DiagnosticoService diagnosticoService = new DiagnosticoService(baseDatos);
         FacturacionService facturacionService = new FacturacionService(baseDatos);
         TratamientoService tratamientoService = new TratamientoService(baseDatos);
         ReporteService reporteService = new ReporteService(baseDatos);

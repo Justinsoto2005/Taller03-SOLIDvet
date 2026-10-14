@@ -1,13 +1,15 @@
 package clinicaveterinaria.model;
 
+import clinicaveterinaria.interfaces.ICaminador;
 
-public class Perro extends Animal {
+public class Perro extends Animal implements ICaminador {
     public Perro(int id, String nombre) {
         super(id, nombre, TipoAnimal.PERRO);
     }
 
     @Override
-    public void volar() {
-        throw new UnsupportedOperationException("Un perro no puede volar.");
+    public void camina() {
+        System.out.println(getNombre()+"Esta caminando");
     }
+
 }
