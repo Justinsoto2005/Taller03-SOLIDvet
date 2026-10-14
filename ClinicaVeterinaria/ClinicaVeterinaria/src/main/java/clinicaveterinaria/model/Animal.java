@@ -5,7 +5,7 @@ import clinicaveterinaria.interfaces.IAnimal;
 import java.util.Objects;
 
 
-public class Animal implements IAnimal {
+public class Animal implements IAnimal{
     private int id;
     private String nombre;
     private TipoAnimal tipo;
@@ -16,20 +16,7 @@ public class Animal implements IAnimal {
         this.tipo = tipo;
     }
 
-    @Override
-    public void volar() {
-        System.out.println(nombre + " esta volando.");
-    }
 
-    @Override
-    public void nadar() {
-        System.out.println(nombre + " esta nadando.");
-    }
-
-    @Override
-    public void caminar() {
-        System.out.println(nombre + " esta caminando.");
-    }
 
     public int getId() {
         return id;
@@ -80,4 +67,12 @@ public class Animal implements IAnimal {
                 ", tipo=" + tipo +
                 '}';
     }
+
+    @Override
+    public void comer() {
+        System.out.println(nombre + " puede comer.");
+    }
+
+
+
 }

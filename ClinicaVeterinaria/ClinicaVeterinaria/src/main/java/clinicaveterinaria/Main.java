@@ -52,8 +52,7 @@ public class Main {
         System.out.println(veterinario.crearReporte(citaDesdeModelo));
 
         Animal pez = new Pez(3, "Nemo");
-        pez.nadar();
-        System.out.println("El pez heredó caminar() y volar(), aunque no debe usarlos.");
+        System.out.println("El pez solo herada nadr, puesto que existe una interface especifica para nadar");
         System.out.println("Tratamiento OCP violado pero funcional: " + tratamiento.obtenerIndicaciones());
     }
 }
