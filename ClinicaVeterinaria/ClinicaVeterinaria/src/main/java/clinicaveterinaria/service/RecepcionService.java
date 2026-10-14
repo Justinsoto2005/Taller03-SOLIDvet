@@ -1,16 +1,22 @@
 package clinicaveterinaria.service;
 
-import clinicaveterinaria.interfaces.IServicioClinica;
+import clinicaveterinaria.interfaces.ITratamiento;
+import clinicaveterinaria.interfaces.IVeterinarioService;
+import clinicaveterinaria.interfaces.ICitaService;
+import clinicaveterinaria.interfaces.IFacturaService;
+import clinicaveterinaria.interfaces.IMascotaService;
+import clinicaveterinaria.interfaces.IReporteService;
 import clinicaveterinaria.model.Cita;
 import clinicaveterinaria.model.Factura;
 import clinicaveterinaria.model.Mascota;
 import clinicaveterinaria.model.Tratamiento;
 import clinicaveterinaria.model.Veterinario;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
-public class RecepcionService implements IServicioClinica {
+public class RecepcionService implements IMascotaService, IVeterinarioService, ICitaService, IFacturaService, ITratamiento, IReporteService {
     private final ServicioClinicaCompleto servicioCompleto;
 
     public RecepcionService(ServicioClinicaCompleto servicioCompleto) {
@@ -105,5 +111,29 @@ public class RecepcionService implements IServicioClinica {
     @Override
     public double calcularIngresosMensual() {
         throw new UnsupportedOperationException("Recepcion no calcula ingresos.");
+    }
+
+    @Override
+    public double calcularCostoFinal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularCostoFinal'");
+    }
+
+    @Override
+    public String obtenerIndicaciones() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'obtenerIndicaciones'");
+    }
+
+    @Override
+    public Cita reservarCita(Mascota mascota, Veterinario veterinario, LocalDate fecha) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reservarCita'");
+    }
+
+    @Override
+    public void diagnosticar(Cita cita, String diagnostico) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'diagnosticar'");
     }
 }

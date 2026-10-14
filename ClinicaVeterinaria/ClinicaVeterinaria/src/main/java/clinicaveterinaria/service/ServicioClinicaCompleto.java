@@ -1,6 +1,11 @@
 package clinicaveterinaria.service;
 
-import clinicaveterinaria.interfaces.IServicioClinica;
+import clinicaveterinaria.interfaces.ICitaService;
+import clinicaveterinaria.interfaces.IFacturaService;
+import clinicaveterinaria.interfaces.IMascotaService;
+import clinicaveterinaria.interfaces.IReporteService;
+import clinicaveterinaria.interfaces.ITratamiento;
+import clinicaveterinaria.interfaces.IVeterinarioService;
 import clinicaveterinaria.model.Cita;
 import clinicaveterinaria.model.Factura;
 import clinicaveterinaria.model.Mascota;
@@ -8,10 +13,11 @@ import clinicaveterinaria.model.Tratamiento;
 import clinicaveterinaria.model.Veterinario;
 import clinicaveterinaria.repository.BaseDatos;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
-public class ServicioClinicaCompleto implements IServicioClinica {
+public class ServicioClinicaCompleto implements IMascotaService, IVeterinarioService, ICitaService, IFacturaService, ITratamiento, IReporteService  {
     private final MascotaService mascotaService;
     private final VeterinarioCrudService veterinarioService;
     private final CitaService citaService;
@@ -119,5 +125,29 @@ public class ServicioClinicaCompleto implements IServicioClinica {
     @Override
     public double calcularIngresosMensual() {
         return reporteService.calcularIngresosMensual();
+    }
+
+    @Override
+    public double calcularCostoFinal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularCostoFinal'");
+    }
+
+    @Override
+    public String obtenerIndicaciones() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'obtenerIndicaciones'");
+    }
+
+    @Override
+    public Cita reservarCita(Mascota mascota, Veterinario veterinario, LocalDate fecha) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reservarCita'");
+    }
+
+    @Override
+    public void diagnosticar(Cita cita, String diagnostico) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'diagnosticar'");
     }
 }

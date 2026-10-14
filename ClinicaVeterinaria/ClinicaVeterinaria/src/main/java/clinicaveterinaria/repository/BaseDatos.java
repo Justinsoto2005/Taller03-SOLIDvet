@@ -68,4 +68,10 @@ public class BaseDatos implements IBaseDatos {
         }
         return total;
     }
+
+    @Override
+    public void conectar() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'conectar'");
+    }
 }
