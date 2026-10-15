@@ -1,0 +1,31 @@
+package clinicaveterinaria.model;
+
+public class VacunaTratamiento extends Tratamiento{
+    public VacunaTratamiento(int id, String descripcion, double costo){
+        super(0, TipoTratamiento.VACUNA, descripcion, costo);
+    }
+
+    public VacunaTratamiento(double costo){
+        super(0, TipoTratamiento.VACUNA, "Vacuna", costo);
+    }
+
+    @Override
+    public double calcularCostoFinal(){
+        return getCosto() + 5.0;
+    }
+
+    @Override
+    public String obtenerIndicaciones(){
+        return "Observar fiebre durante 24 horas.";
+    }
+
+    @Override
+    public String prepararSala(){
+        return "Preparar refrigeracion y jeringas.";
+    }
+
+    @Override
+    public double calcularConImpuestos(){
+        return getCosto() * 1.12;
+    }
+}
